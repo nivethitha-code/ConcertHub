@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queries</title>
+    <style>
+        body {
+            background-color: black;
+            color: pink;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color:pink;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+        .answer {
+            display: none;
+            background-color: #444;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Frequently Asked Questions</h1>
+    <div class="container">
+
+        <div class="question">
+            <h3> How can I book tickets?</h3>
+            <button onclick="toggleAnswer('answer1')">Click here</button>
+            <div id="answer1" class="answer">
+                You can book tickets through our online portal by selecting your preferred event and following the checkout process.
+            </div>
+        </div>
+
+        <div class="question">
+            <h3> Print the concert Details!</h3>
+            <button onclick="toggleAnswer('answer2')">Click here</button>
+            <div id="answer2" class="answer">
+                Artist =Aniruth               Location=Chennai
+            </div>
+        </div>
+
+        <div class="question">
+            <h3> How many tickets are avaliable?</h3>
+            <button onclick="toggleAnswer('answer3')">Click here</button>
+            <div id="answer3" class="answer">  
+                34 Tickets avaliable!!
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

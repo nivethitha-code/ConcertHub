@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=90%, initial-scale=2.0">  
+    <title>Admin Section</title>
+    <style>
+        body {
+            background-color: rgb(9, 2, 2);
+            color: rgb(35, 255, 229);
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label, input, select {
+            display: block;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: rgb(35, 255, 229);
+            border: none;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color:rgb(35, 255, 229);
+        }
+            input[type="reset"]:hover {
+                background-color:rgb(35, 255, 229);
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Section</h1>
+
+    <form action="/admin_insert" method="post">
+        <!-- Artist Form -->
+        <h2>Artist</h2>
+        <label for="artist_id">Artist ID:</label>
+        <input type="text" id="artist_id" name="artist_id" required>
+
+        <label for="artist_name">Artist Name:</label>
+        <input type="text" id="artist_name" name="artist_name" required>
+
+        <label for="artist_gender">Gender:</label>
+        <select id="artist_gender" name="artist_gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label for="no_of_songs">Number of Songs:</label>
+        <input type="number" id="no_of_songs" name="no_of_songs" required>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="artist_age">Artist Age:</label>
+        <input type="number" id="artist_age" name="artist_age" required>
+
+        <!-- Playback Singer Form -->
+        
+        <h2>Playback Singer</h2>
+        <label for="artist1_id">Artist 1 ID:</label>
+        <input type="text" id="artist1_id" name="artist1_id" required>
+
+        <label for="playbks_id">Playback singer ID:</label>
+        <input type="text" id="playbks_id" name="playbks_id" required>
+
+        <label for="playbks_name">Playback Singer Name:</label>
+        <input type="text" id="playbks_name" name="playbks_name" required>
+
+        <label for="playbks_gender">Playback Singer Gender:</label>
+        <select id="playbks_gender" name="playbks_gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label for="playbks_age">Playback Singer Age:</label>
+        <input type="number" id="playbks_age" name="playbks_age" required>
+
+        <!-- Instrumental Band Form -->
+        <h2>Instrumental Band</h2>
+        <label for="artist2_id">Artist 2 ID:</label>
+        <input type="text" id="artist2_id" name="artist2_id" required>
+
+        <label for="band_id">Band ID:</label>
+        <input type="text" id="band_id" name="band_id" required>
+
+        <label for="band_name">Band Name:</label>
+        <input type="text" id="band_name" name="band_name" required>
+
+        <label for="instrumentplayer_name">Instrument Player Name:</label>
+        <input type="text" id="instrumentplayer_name" name="instrumentplayer_name" required>
+
+        <label for="instrumentname">Instrument Name:</label>
+        <input type="text" id="instrumentname" name="instrumentname" required>
+
+        <label for="instrumentplayer_age">Instrument Player Age:</label>
+        <input type="number" id="instrumentplayer_age" name="instrumentplayer_age" required>
+
+        <!-- genre Form -->
+        <h2>Genre</h2>
+        <label for="genre_id">Genre ID:</label>
+        <input type="text" id="genre_id" name="genre_id" required>
+
+        <label for="genre_name">Genre Name:</label>
+        <input type="text" id="genre_name" name="genre_name" required>
+
+        <!-- Song Form -->
+        <h2>Song</h2>
+        <label for="artist3_id">Artist 3 ID:</label>
+        <input type="text" id="artist3_id" name="artist3_id" required>
+
+        <label for="genre1_id">Genre 1 ID:</label>
+        <input type="text" id="genre1_id" name="genre1_id" required>
+
+        <label for="song_id">Song ID:</label>
+        <input type="text" id="song_id" name="song_id" required>
+
+        <label for="song_name">Song Name:</label>
+        <input type="text" id="song_name" name="song_name" required>
+
+        <!-- Location Form -->
+        <h2>Location</h2>
+        <label for="artist4_id">Artist 4 ID:</label>
+        <input type="text" id="artist4_id" name="artist4_id" required>
+
+        <label for="location_id">Location ID:</label>
+        <input type="text" id="location_id" name="location_id" required>
+
+        <label for="location_name">Location Name:</label>
+        <input type="text" id="location_name" name="location_name" required>
+
+        <label for="accomodation">Accommodation:</label>
+        <input type="number" id="accomodation" name="accomodation" required>
+
+        <label for="concert_date">Concert Date:</label>
+        <input type="date" id="concert_date" name="concert_date" required>
+
+        <label for="concert_time">Concert Time:</label>
+        <input type="time" id="concert_time" name="concert_time" required>
+
+        <!-- Tickets Form -->
+        <h2>Tickets</h2>
+
+        <label for="location1_id">Location 1 ID:</label>
+        <input type="text" id="location1_id" name="location1_id" required>
+
+        <label for="ticket_type">Ticket Type:</label>
+        <input type="text" id="ticket_type" name="ticket_type" required>
+
+        <label for="ticket_name">Ticket Name:</label>
+        <input type="text" id="ticket_name" name="ticket_name" required>
+
+        <label for="available_tickets">Available Tickets:</label>
+        <input type="number" id="available_tickets" name="available_tickets" min="0" required>
+
+        <label for="price">Ticket Price:</label>
+        <input type="number" id="price" name="price" min="0" required>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

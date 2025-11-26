@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Tickets and Locations</title>
+    <style>
+        body {
+            background-color: black;
+            color: pink;
+            text-align: center;
+        }
+        form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        label, input, select {
+            display: block;
+            margin: 10px 0;
+            color: pink;
+        }
+        input, select {
+            padding: 8px;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 5px;
+            border: none;
+        }
+        input[type="submit"] {
+            background-color: #fd62af;
+            cursor: pointer;
+            width: 150px;
+        }
+        input[type="submit"]:hover {
+            background-color: #ff85d5;
+        }
+        input[type="submit"]:hover {
+            background-color:rgb(35, 255, 229);
+        }
+    </style>
+</head>
+<body>
+    <h1>Update Tickets and Location</h1>
+
+    <!-- Ticket Update Form -->
+    <form action="/admin_update" method="post">
+        <h2>Update OLD Ticket Information!!</h2>
+        <label for="location2_id">Location ID:</label>
+        <input type="text" id="location2_id" name="location2_id" required>
+
+        <label for="ticket2_type">Ticket Type:</label>
+        <input type="text" id="ticket2_type" name="ticket2_type" required>
+
+        <label for="ticket1_name">Ticket Name:</label>
+        <input type="text" id="ticket1_name" name="ticket1_name" required>
+
+        <label for="available1_tickets">Available Tickets:</label>
+        <input type="number" id="available1_tickets" name="available1_tickets" required>
+
+        <label for="price1">Ticket Price:</label>
+        <input type="number" id="price1" name="price1" required>
+
+        <label for="location3_id">New Location ID:</label>
+        <input type="text" id="location3_id" name="location3_id" required>
+    
+        <label for="ticket3_type">New Ticket Type:</label>
+        <input type="text" id="ticket3_type" name="ticket3_type" required>
+    
+        <label for="ticket2_name">New Ticket Name:</label>
+        <input type="text" id="ticket2_name" name="ticket2_name" required>
+    
+        <label for="available2_tickets">New Available Tickets:</label>
+        <input type="number" id="available2_tickets" name="available2_tickets" required>
+    
+        <label for="price2">New Ticket Price:</label>
+        <input type="number" id="price2" name="price2" required>
+    
+            
+        <input type="submit" value="Update Ticket">
+    </form>
+    
+
+ 
+    <br><br>
+
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <style>
+      body {
+            background-color: black;
+            color: pink;
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+        label, input, select {
+            display: block;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #details {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color:rgb(35, 255, 229);
+        }
+            input[type="reset"]:hover {
+                background-color:rgb(35, 255, 229);
+        }
+    </style>
+    <script>
+        function updateDetails() {
+            // Get selected ticket type
+            const ticketType = document.getElementById('ticketType').value;
+
+            const selectedTicket = ticketData[ticketType];
+
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Book Your Tickets</h1>
+    <form action="/user" method="post">
+
+        <label for="fan_name">Enter Your Name:</label>
+        <input type="text" id="fan_name" name="fan_name" required>
+
+        <label for="artist1_name">Enter Your Artist Name:</label>
+        <input type="text" id="artist1_name" name="artist1_name" required>
+
+        <label for="location1_name">Enter Location :</label>
+        <input type="text" id="location1_name" name="location1_name" required>
+
+        <label for="ticket1_type">Enter Ticket Type:</label>
+        <input type="ticket1_type" id="ticket1_type" name="ticket1_type" onchange="updateDetails()" required>
+
+        <label for="no_of_tickets">Number of Tickets:</label>
+        <input type="number" id="no_of_tickets" name="no_of_tickets" min="1" required>
+
+        <label for="book_id">Enter Booking ID:</label>
+        <input type="text" id="book_id" name="book_id" required>
+        
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
